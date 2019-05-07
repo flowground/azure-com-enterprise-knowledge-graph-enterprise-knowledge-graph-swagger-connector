@@ -1,0 +1,112 @@
+{
+    "type": "object",
+    "properties": {
+        "resourceGroupName": {
+            "required": true,
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 64,
+            "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.-]*$"
+        },
+        "resourceName": {
+            "required": true,
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 64,
+            "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.-]*$"
+        },
+        "subscriptionId": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "allOf": [
+                {
+                    "description": "Azure resource",
+                    "properties": {
+                        "id": {
+                            "description": "Specifies the resource ID.",
+                            "readOnly": true,
+                            "type": "string"
+                        },
+                        "location": {
+                            "description": "Specifies the location of the resource.",
+                            "type": "string"
+                        },
+                        "name": {
+                            "description": "Specifies the name of the resource.",
+                            "readOnly": true,
+                            "type": "string"
+                        },
+                        "sku": {
+                            "description": "Gets or sets the SKU of the resource.",
+                            "properties": {
+                                "name": {
+                                    "description": "The sku name",
+                                    "enum": [
+                                        "F0",
+                                        "S1"
+                                    ],
+                                    "type": "string",
+                                    "x-ms-enum": {
+                                        "modelAsString": true,
+                                        "name": "SkuName"
+                                    }
+                                }
+                            },
+                            "required": [
+                                "name"
+                            ],
+                            "type": "object"
+                        },
+                        "tags": {
+                            "additionalProperties": {
+                                "type": "string"
+                            },
+                            "description": "Contains resource tags defined as key/value pairs.",
+                            "type": "object"
+                        },
+                        "type": {
+                            "description": "Specifies the type of the resource.",
+                            "readOnly": true,
+                            "type": "string"
+                        }
+                    },
+                    "x-ms-azure-resource": true,
+                    "type": "object"
+                }
+            ],
+            "description": "EnterpriseKnowledgeGraph resource definition",
+            "properties": {
+                "properties": {
+                    "description": "The set of properties specific to EnterpriseKnowledgeGraph resource",
+                    "properties": {
+                        "description": {
+                            "description": "The description of the EnterpriseKnowledgeGraph",
+                            "type": "string"
+                        },
+                        "metadata": {
+                            "description": "Specifies the metadata  of the resource.",
+                            "type": "object"
+                        },
+                        "provisioningState": {
+                            "description": "The state of EnterpriseKnowledgeGraph provisioning",
+                            "enum": [
+                                "Creating",
+                                "Deleting",
+                                "Failed",
+                                "Succeeded"
+                            ],
+                            "type": "string"
+                        }
+                    }
+                }
+            },
+            "type": "object"
+        },
+        "api_version": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

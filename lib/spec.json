@@ -1,0 +1,2302 @@
+{
+    "openapi": "3.0.0",
+    "servers": [
+        {
+            "url": "https://management.azure.com/"
+        }
+    ],
+    "info": {
+        "description": "Azure Enterprise Knowledge Graph Service is a platform for creating knowledge graphs at scale.",
+        "title": "Azure Enterprise Knowledge Graph Service",
+        "version": "2018-12-03",
+        "x-apisguru-categories": [
+            "cloud"
+        ],
+        "x-logo": {
+            "url": "https://api.apis.guru/v2/cache/logo/https_assets.onestore.ms_cdnfiles_onestorerolling-1606-01000_shell_v3_images_logo_microsoft.png"
+        },
+        "x-origin": [
+            {
+                "format": "swagger",
+                "url": "https://raw.githubusercontent.com/Azure/azure-rest-api-specs/master/specification/EnterpriseKnowledgeGraph/resource-manager/Microsoft.EnterpriseKnowledgeGraph/preview/2018-12-03/EnterpriseKnowledgeGraphSwagger.json",
+                "version": "2.0"
+            }
+        ],
+        "x-preferred": true,
+        "x-providerName": "azure.com",
+        "x-serviceName": "EnterpriseKnowledgeGraph-EnterpriseKnowledgeGraphSwagger",
+        "x-tags": [
+            "Azure",
+            "Microsoft"
+        ]
+    },
+    "paths": {
+        "/providers/Microsoft.EnterpriseKnowledgeGraph/operations": {
+            "get": {
+                "deprecated": false,
+                "description": "Lists all the available EnterpriseKnowledgeGraph services operations.",
+                "operationId": "Operations_List",
+                "parameters": [
+                    {
+                        "description": "Version of the API to be used with the client request.",
+                        "in": "query",
+                        "name": "api-version",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "description": "The list of EnterpriseKnowledgeGraph service operation response.",
+                                    "properties": {
+                                        "nextLink": {
+                                            "description": "The link used to get the next page of operations.",
+                                            "type": "string"
+                                        },
+                                        "value": {
+                                            "description": "The list of operations.",
+                                            "items": {
+                                                "description": "The operations supported by EnterpriseKnowledgeGraph Service Management.",
+                                                "properties": {
+                                                    "display": {
+                                                        "description": "The operation supported by EnterpriseKnowledgeGraph Service Management.",
+                                                        "properties": {
+                                                            "description": {
+                                                                "description": "The description of the operation.",
+                                                                "type": "string"
+                                                            },
+                                                            "operation": {
+                                                                "description": "The action that users can perform, based on their permission level.",
+                                                                "type": "string"
+                                                            },
+                                                            "provider": {
+                                                                "description": "Service provider: Microsoft EnterpriseKnowledgeGraph Service.",
+                                                                "type": "string"
+                                                            },
+                                                            "resource": {
+                                                                "description": "Resource on which the operation is performed.",
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "type": "object"
+                                                    },
+                                                    "name": {
+                                                        "description": "Operation name: {provider}/{resource}/{operation}.",
+                                                        "type": "string"
+                                                    },
+                                                    "origin": {
+                                                        "description": "The origin of the operation.",
+                                                        "type": "string"
+                                                    },
+                                                    "properties": {
+                                                        "description": "Additional properties.",
+                                                        "type": "object"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            },
+                                            "type": "array"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "Operations"
+                ],
+                "x-ms-examples": {
+                    "Get Operations": {
+                        "parameters": {
+                            "api-version": "2018-12-03"
+                        },
+                        "responses": {
+                            "200": {
+                                "body": {
+                                    "value": [
+                                        {
+                                            "display": {
+                                                "description": "Read EnterpriseKnowledgeGraph resources",
+                                                "operation": "Read EnterpriseKnowledgeGraph resource",
+                                                "provider": "Microsoft EnterpriseKnowledgeGraph Service",
+                                                "resource": "EnterpriseKnowledgeGraph Service"
+                                            },
+                                            "name": "Microsoft.EnterpriseKnowledgeGraph/services/read",
+                                            "origin": "user,system"
+                                        },
+                                        {
+                                            "display": {
+                                                "description": "Writes EnterpriseKnowledgeGraph resources",
+                                                "operation": "Write EnterpriseKnowledgeGraph resource",
+                                                "provider": "Microsoft EnterpriseKnowledgeGraph Service",
+                                                "resource": "EnterpriseKnowledgeGraph Service"
+                                            },
+                                            "name": "Microsoft.EnterpriseKnowledgeGraph/services/write",
+                                            "origin": "user,system"
+                                        },
+                                        {
+                                            "display": {
+                                                "description": "Deletes EnterpriseKnowledgeGraph resources",
+                                                "operation": "Delete EnterpriseKnowledgeGraph resource",
+                                                "provider": "Microsoft EnterpriseKnowledgeGraph Service",
+                                                "resource": "EnterpriseKnowledgeGraph Service"
+                                            },
+                                            "name": "Microsoft.EnterpriseKnowledgeGraph/services/delete",
+                                            "origin": "user,system"
+                                        },
+                                        {
+                                            "display": {
+                                                "description": "Read the operations for all resource types.",
+                                                "operation": "Read resource provider operations",
+                                                "provider": "Microsoft EnterpriseKnowledgeGraph Service",
+                                                "resource": "Operations"
+                                            },
+                                            "name": "Microsoft.EnterpriseKnowledgeGraph/Operations/read",
+                                            "origin": "user,system"
+                                        },
+                                        {
+                                            "display": {
+                                                "description": "Read the status of an asynchronous operation.",
+                                                "operation": "Read Operation Result.",
+                                                "provider": "Microsoft EnterpriseKnowledgeGraph Service",
+                                                "resource": "Operation Result"
+                                            },
+                                            "name": "Microsoft.EnterpriseKnowledgeGraph/locations/operationresults/read",
+                                            "origin": "user,system"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-ms-pageable": {
+                    "nextLinkName": "nextLink"
+                }
+            }
+        },
+        "/subscriptions/{subscriptionId}/providers/Microsoft.EnterpriseKnowledgeGraph/services": {
+            "get": {
+                "description": "Returns all the resources of a particular type belonging to a subscription.",
+                "operationId": "EnterpriseKnowledgeGraph_List",
+                "parameters": [
+                    {
+                        "description": "Version of the API to be used with the client request.",
+                        "in": "query",
+                        "name": "api-version",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Azure Subscription ID.",
+                        "in": "path",
+                        "name": "subscriptionId",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The resource provider should return 200 (OK) to indicate that the operation completed successfully. For other errors (e.g. internal errors) use the appropriate HTTP error code.\nThe nextLink field is expected to point to the URL the client should use to fetch the next page (per server side paging). This matches the OData guidelines for paged responses. If a resource provider does not support paging, it should return the same body but leave nextLink empty for future compatibility.\nFor a detailed explanation of each field in the response body, please refer to the request body description in the PUT resource section. ",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "description": "The list of  EnterpriseKnowledgeGraph service operation response.",
+                                    "properties": {
+                                        "nextLink": {
+                                            "description": "The link used to get the next page of EnterpriseKnowledgeGraph service resources.",
+                                            "type": "string"
+                                        },
+                                        "value": {
+                                            "description": "Gets the list of EnterpriseKnowledgeGraph service results and their properties.",
+                                            "items": {
+                                                "allOf": [
+                                                    {
+                                                        "description": "Azure resource",
+                                                        "properties": {
+                                                            "id": {
+                                                                "description": "Specifies the resource ID.",
+                                                                "readOnly": true,
+                                                                "type": "string"
+                                                            },
+                                                            "location": {
+                                                                "description": "Specifies the location of the resource.",
+                                                                "type": "string"
+                                                            },
+                                                            "name": {
+                                                                "description": "Specifies the name of the resource.",
+                                                                "readOnly": true,
+                                                                "type": "string"
+                                                            },
+                                                            "sku": {
+                                                                "description": "Gets or sets the SKU of the resource.",
+                                                                "properties": {
+                                                                    "name": {
+                                                                        "description": "The sku name",
+                                                                        "enum": [
+                                                                            "F0",
+                                                                            "S1"
+                                                                        ],
+                                                                        "type": "string",
+                                                                        "x-ms-enum": {
+                                                                            "modelAsString": true,
+                                                                            "name": "SkuName"
+                                                                        }
+                                                                    }
+                                                                },
+                                                                "required": [
+                                                                    "name"
+                                                                ],
+                                                                "type": "object"
+                                                            },
+                                                            "tags": {
+                                                                "additionalProperties": {
+                                                                    "type": "string"
+                                                                },
+                                                                "description": "Contains resource tags defined as key/value pairs.",
+                                                                "type": "object"
+                                                            },
+                                                            "type": {
+                                                                "description": "Specifies the type of the resource.",
+                                                                "readOnly": true,
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "x-ms-azure-resource": true,
+                                                        "type": "object"
+                                                    }
+                                                ],
+                                                "description": "EnterpriseKnowledgeGraph resource definition",
+                                                "properties": {
+                                                    "properties": {
+                                                        "description": "The set of properties specific to EnterpriseKnowledgeGraph resource",
+                                                        "properties": {
+                                                            "description": {
+                                                                "description": "The description of the EnterpriseKnowledgeGraph",
+                                                                "type": "string"
+                                                            },
+                                                            "metadata": {
+                                                                "description": "Specifies the metadata  of the resource.",
+                                                                "type": "object"
+                                                            },
+                                                            "provisioningState": {
+                                                                "description": "The state of EnterpriseKnowledgeGraph provisioning",
+                                                                "enum": [
+                                                                    "Creating",
+                                                                    "Deleting",
+                                                                    "Failed",
+                                                                    "Succeeded"
+                                                                ],
+                                                                "type": "string"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "type": "object"
+                                            },
+                                            "readOnly": true,
+                                            "type": "array"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Error response describing why the operation failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "description": "EnterpriseKnowledgeGraph Service error object.",
+                                    "properties": {
+                                        "error": {
+                                            "description": "The error body.",
+                                            "properties": {
+                                                "code": {
+                                                    "description": "error code",
+                                                    "type": "string"
+                                                },
+                                                "message": {
+                                                    "description": "error message",
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "required": [
+                                                "code",
+                                                "message"
+                                            ],
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "EnterpriseKnowledgeGraph"
+                ],
+                "x-ms-examples": {
+                    "List EnterpriseKnowledgeGraph by Subscription": {
+                        "parameters": {
+                            "api-version": "2018-12-03",
+                            "subscriptionId": "subscription-id"
+                        },
+                        "responses": {
+                            "200": {
+                                "body": {
+                                    "value": [
+                                        {
+                                            "id": "someid",
+                                            "name": "samplename",
+                                            "properties": {
+                                                "provisioningState": "Succeeded"
+                                            },
+                                            "type": "sampletype"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-ms-pageable": {
+                    "nextLinkName": "nextLink"
+                }
+            }
+        },
+        "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EnterpriseKnowledgeGraph/services": {
+            "get": {
+                "description": "Returns all the resources of a particular type belonging to a resource group",
+                "operationId": "EnterpriseKnowledgeGraph_ListByResourceGroup",
+                "parameters": [
+                    {
+                        "description": "The name of the EnterpriseKnowledgeGraph resource group in the user subscription.",
+                        "in": "path",
+                        "name": "resourceGroupName",
+                        "required": true,
+                        "x-ms-parameter-location": "method",
+                        "schema": {
+                            "type": "string",
+                            "minLength": 2,
+                            "maxLength": 64,
+                            "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.-]*$"
+                        }
+                    },
+                    {
+                        "description": "Azure Subscription ID.",
+                        "in": "path",
+                        "name": "subscriptionId",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Version of the API to be used with the client request.",
+                        "in": "query",
+                        "name": "api-version",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The resource provider should return 200 (OK) to indicate that the operation completed successfully. For other errors (e.g. internal errors) use the appropriate HTTP error code.\nThe nextLink field is expected to point to the URL the client should use to fetch the next page (per server side paging). This matches the OData guidelines for paged responses here. If a resource provider does not support paging, it should return the same body (JSON object with “value” property) but omit nextLink entirely (or set to null, *not* empty string) for future compatibility.\nThe nextLink should be implemented using following query parameters:\n· skipToken: opaque token that allows the resource provider to skip resources already enumerated. This value is defined and returned by the RP after first request via nextLink.\n· top: the optional client query parameter which defines the maximum number of records to be returned by the server.\nImplementation details:\n· NextLink may include all the query parameters (specifically OData $filter) used by the client in the first query. \n· Server may return less records than requested with nextLink. Returning zero records with NextLink is an acceptable response. \nClients must fetch records until the nextLink is not returned back / null. Clients should never rely on number of returned records to determinate if pagination is completed.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "description": "The list of  EnterpriseKnowledgeGraph service operation response.",
+                                    "properties": {
+                                        "nextLink": {
+                                            "description": "The link used to get the next page of EnterpriseKnowledgeGraph service resources.",
+                                            "type": "string"
+                                        },
+                                        "value": {
+                                            "description": "Gets the list of EnterpriseKnowledgeGraph service results and their properties.",
+                                            "items": {
+                                                "allOf": [
+                                                    {
+                                                        "description": "Azure resource",
+                                                        "properties": {
+                                                            "id": {
+                                                                "description": "Specifies the resource ID.",
+                                                                "readOnly": true,
+                                                                "type": "string"
+                                                            },
+                                                            "location": {
+                                                                "description": "Specifies the location of the resource.",
+                                                                "type": "string"
+                                                            },
+                                                            "name": {
+                                                                "description": "Specifies the name of the resource.",
+                                                                "readOnly": true,
+                                                                "type": "string"
+                                                            },
+                                                            "sku": {
+                                                                "description": "Gets or sets the SKU of the resource.",
+                                                                "properties": {
+                                                                    "name": {
+                                                                        "description": "The sku name",
+                                                                        "enum": [
+                                                                            "F0",
+                                                                            "S1"
+                                                                        ],
+                                                                        "type": "string",
+                                                                        "x-ms-enum": {
+                                                                            "modelAsString": true,
+                                                                            "name": "SkuName"
+                                                                        }
+                                                                    }
+                                                                },
+                                                                "required": [
+                                                                    "name"
+                                                                ],
+                                                                "type": "object"
+                                                            },
+                                                            "tags": {
+                                                                "additionalProperties": {
+                                                                    "type": "string"
+                                                                },
+                                                                "description": "Contains resource tags defined as key/value pairs.",
+                                                                "type": "object"
+                                                            },
+                                                            "type": {
+                                                                "description": "Specifies the type of the resource.",
+                                                                "readOnly": true,
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "x-ms-azure-resource": true,
+                                                        "type": "object"
+                                                    }
+                                                ],
+                                                "description": "EnterpriseKnowledgeGraph resource definition",
+                                                "properties": {
+                                                    "properties": {
+                                                        "description": "The set of properties specific to EnterpriseKnowledgeGraph resource",
+                                                        "properties": {
+                                                            "description": {
+                                                                "description": "The description of the EnterpriseKnowledgeGraph",
+                                                                "type": "string"
+                                                            },
+                                                            "metadata": {
+                                                                "description": "Specifies the metadata  of the resource.",
+                                                                "type": "object"
+                                                            },
+                                                            "provisioningState": {
+                                                                "description": "The state of EnterpriseKnowledgeGraph provisioning",
+                                                                "enum": [
+                                                                    "Creating",
+                                                                    "Deleting",
+                                                                    "Failed",
+                                                                    "Succeeded"
+                                                                ],
+                                                                "type": "string"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "type": "object"
+                                            },
+                                            "readOnly": true,
+                                            "type": "array"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Error response describing why the operation failed. If the resource group does not exist, 404 (NotFound) will be returned.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "description": "EnterpriseKnowledgeGraph Service error object.",
+                                    "properties": {
+                                        "error": {
+                                            "description": "The error body.",
+                                            "properties": {
+                                                "code": {
+                                                    "description": "error code",
+                                                    "type": "string"
+                                                },
+                                                "message": {
+                                                    "description": "error message",
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "required": [
+                                                "code",
+                                                "message"
+                                            ],
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "EnterpriseKnowledgeGraph"
+                ],
+                "x-ms-examples": {
+                    "List EnterpriseKnowledgeGraph by Resource Group": {
+                        "parameters": {
+                            "api-version": "2018-12-03",
+                            "resourceGroupName": "OneResourceGroupName",
+                            "subscriptionId": "subscription-id"
+                        },
+                        "responses": {
+                            "200": {
+                                "body": {
+                                    "value": [
+                                        {
+                                            "id": "someid",
+                                            "name": "samplename",
+                                            "properties": {
+                                                "provisioningState": "Succeeded"
+                                            },
+                                            "type": "sampletype"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-ms-pageable": {
+                    "nextLinkName": "nextLink"
+                }
+            }
+        },
+        "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EnterpriseKnowledgeGraph/services/{resourceName}": {
+            "delete": {
+                "description": "Deletes a EnterpriseKnowledgeGraph Service from the resource group. ",
+                "operationId": "EnterpriseKnowledgeGraph_Delete",
+                "parameters": [
+                    {
+                        "description": "The name of the EnterpriseKnowledgeGraph resource group in the user subscription.",
+                        "in": "path",
+                        "name": "resourceGroupName",
+                        "required": true,
+                        "x-ms-parameter-location": "method",
+                        "schema": {
+                            "type": "string",
+                            "minLength": 2,
+                            "maxLength": 64,
+                            "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.-]*$"
+                        }
+                    },
+                    {
+                        "description": "The name of the EnterpriseKnowledgeGraph resource.",
+                        "in": "path",
+                        "name": "resourceName",
+                        "required": true,
+                        "x-ms-parameter-location": "method",
+                        "schema": {
+                            "type": "string",
+                            "minLength": 2,
+                            "maxLength": 64,
+                            "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.-]*$"
+                        }
+                    },
+                    {
+                        "description": "Version of the API to be used with the client request.",
+                        "in": "query",
+                        "name": "api-version",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Azure Subscription ID.",
+                        "in": "path",
+                        "name": "subscriptionId",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "A 200 (OK) should be returned if the object exists and was deleted successfully;"
+                    },
+                    "204": {
+                        "description": "a 204 (NoContent) should be used if the resource does not exist and the request is well formed."
+                    },
+                    "default": {
+                        "description": "Error response describing why the operation failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "description": "EnterpriseKnowledgeGraph Service error object.",
+                                    "properties": {
+                                        "error": {
+                                            "description": "The error body.",
+                                            "properties": {
+                                                "code": {
+                                                    "description": "error code",
+                                                    "type": "string"
+                                                },
+                                                "message": {
+                                                    "description": "error message",
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "required": [
+                                                "code",
+                                                "message"
+                                            ],
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "EnterpriseKnowledgeGraph"
+                ],
+                "x-ms-examples": {
+                    "Delete EnterpriseKnowledgeGraph": {
+                        "parameters": {
+                            "api-version": "2018-12-03",
+                            "resourceGroupName": "OneResourceGroupName",
+                            "resourceName": "sampleekgname",
+                            "subscriptionId": "subscription-id"
+                        },
+                        "responses": {
+                            "200": {},
+                            "204": {}
+                        }
+                    }
+                }
+            },
+            "get": {
+                "description": "Returns a EnterpriseKnowledgeGraph service specified by the parameters.",
+                "operationId": "EnterpriseKnowledgeGraph_Get",
+                "parameters": [
+                    {
+                        "description": "The name of the EnterpriseKnowledgeGraph resource group in the user subscription.",
+                        "in": "path",
+                        "name": "resourceGroupName",
+                        "required": true,
+                        "x-ms-parameter-location": "method",
+                        "schema": {
+                            "type": "string",
+                            "minLength": 2,
+                            "maxLength": 64,
+                            "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.-]*$"
+                        }
+                    },
+                    {
+                        "description": "The name of the EnterpriseKnowledgeGraph resource.",
+                        "in": "path",
+                        "name": "resourceName",
+                        "required": true,
+                        "x-ms-parameter-location": "method",
+                        "schema": {
+                            "type": "string",
+                            "minLength": 2,
+                            "maxLength": 64,
+                            "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.-]*$"
+                        }
+                    },
+                    {
+                        "description": "Version of the API to be used with the client request.",
+                        "in": "query",
+                        "name": "api-version",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Azure Subscription ID.",
+                        "in": "path",
+                        "name": "subscriptionId",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The resource provider should return 200 (OK) to indicate that the operation completed successfully. ",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "allOf": [
+                                        {
+                                            "description": "Azure resource",
+                                            "properties": {
+                                                "id": {
+                                                    "description": "Specifies the resource ID.",
+                                                    "readOnly": true,
+                                                    "type": "string"
+                                                },
+                                                "location": {
+                                                    "description": "Specifies the location of the resource.",
+                                                    "type": "string"
+                                                },
+                                                "name": {
+                                                    "description": "Specifies the name of the resource.",
+                                                    "readOnly": true,
+                                                    "type": "string"
+                                                },
+                                                "sku": {
+                                                    "description": "Gets or sets the SKU of the resource.",
+                                                    "properties": {
+                                                        "name": {
+                                                            "description": "The sku name",
+                                                            "enum": [
+                                                                "F0",
+                                                                "S1"
+                                                            ],
+                                                            "type": "string",
+                                                            "x-ms-enum": {
+                                                                "modelAsString": true,
+                                                                "name": "SkuName"
+                                                            }
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "name"
+                                                    ],
+                                                    "type": "object"
+                                                },
+                                                "tags": {
+                                                    "additionalProperties": {
+                                                        "type": "string"
+                                                    },
+                                                    "description": "Contains resource tags defined as key/value pairs.",
+                                                    "type": "object"
+                                                },
+                                                "type": {
+                                                    "description": "Specifies the type of the resource.",
+                                                    "readOnly": true,
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "x-ms-azure-resource": true,
+                                            "type": "object"
+                                        }
+                                    ],
+                                    "description": "EnterpriseKnowledgeGraph resource definition",
+                                    "properties": {
+                                        "properties": {
+                                            "description": "The set of properties specific to EnterpriseKnowledgeGraph resource",
+                                            "properties": {
+                                                "description": {
+                                                    "description": "The description of the EnterpriseKnowledgeGraph",
+                                                    "type": "string"
+                                                },
+                                                "metadata": {
+                                                    "description": "Specifies the metadata  of the resource.",
+                                                    "type": "object"
+                                                },
+                                                "provisioningState": {
+                                                    "description": "The state of EnterpriseKnowledgeGraph provisioning",
+                                                    "enum": [
+                                                        "Creating",
+                                                        "Deleting",
+                                                        "Failed",
+                                                        "Succeeded"
+                                                    ],
+                                                    "type": "string"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Error response describing why the operation failed. If the resource group *or* resource does not exist, 404 (NotFound) should be returned.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "description": "EnterpriseKnowledgeGraph Service error object.",
+                                    "properties": {
+                                        "error": {
+                                            "description": "The error body.",
+                                            "properties": {
+                                                "code": {
+                                                    "description": "error code",
+                                                    "type": "string"
+                                                },
+                                                "message": {
+                                                    "description": "error message",
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "required": [
+                                                "code",
+                                                "message"
+                                            ],
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "EnterpriseKnowledgeGraph"
+                ],
+                "x-ms-examples": {
+                    "Get EnterpriseKnowledgeGraph": {
+                        "parameters": {
+                            "api-version": "2018-12-03",
+                            "resourceGroupName": "OneResourceGroupName",
+                            "resourceName": "sampleekgname",
+                            "subscriptionId": "subscription-id"
+                        },
+                        "responses": {
+                            "200": {
+                                "id": "someid",
+                                "name": "samplename",
+                                "properties": {
+                                    "provisioningState": "Succeedded"
+                                },
+                                "type": "sampletype"
+                            }
+                        }
+                    }
+                }
+            },
+            "patch": {
+                "description": "Updates a EnterpriseKnowledgeGraph Service",
+                "operationId": "EnterpriseKnowledgeGraph_Update",
+                "parameters": [
+                    {
+                        "description": "The name of the EnterpriseKnowledgeGraph resource group in the user subscription.",
+                        "in": "path",
+                        "name": "resourceGroupName",
+                        "required": true,
+                        "x-ms-parameter-location": "method",
+                        "schema": {
+                            "type": "string",
+                            "minLength": 2,
+                            "maxLength": 64,
+                            "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.-]*$"
+                        }
+                    },
+                    {
+                        "description": "The name of the EnterpriseKnowledgeGraph resource.",
+                        "in": "path",
+                        "name": "resourceName",
+                        "required": true,
+                        "x-ms-parameter-location": "method",
+                        "schema": {
+                            "type": "string",
+                            "minLength": 2,
+                            "maxLength": 64,
+                            "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.-]*$"
+                        }
+                    },
+                    {
+                        "description": "Version of the API to be used with the client request.",
+                        "in": "query",
+                        "name": "api-version",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Azure Subscription ID.",
+                        "in": "path",
+                        "name": "subscriptionId",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The resource provider should return 200 (OK) to indicate that the operation completed successfully. ",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "allOf": [
+                                        {
+                                            "description": "Azure resource",
+                                            "properties": {
+                                                "id": {
+                                                    "description": "Specifies the resource ID.",
+                                                    "readOnly": true,
+                                                    "type": "string"
+                                                },
+                                                "location": {
+                                                    "description": "Specifies the location of the resource.",
+                                                    "type": "string"
+                                                },
+                                                "name": {
+                                                    "description": "Specifies the name of the resource.",
+                                                    "readOnly": true,
+                                                    "type": "string"
+                                                },
+                                                "sku": {
+                                                    "description": "Gets or sets the SKU of the resource.",
+                                                    "properties": {
+                                                        "name": {
+                                                            "description": "The sku name",
+                                                            "enum": [
+                                                                "F0",
+                                                                "S1"
+                                                            ],
+                                                            "type": "string",
+                                                            "x-ms-enum": {
+                                                                "modelAsString": true,
+                                                                "name": "SkuName"
+                                                            }
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "name"
+                                                    ],
+                                                    "type": "object"
+                                                },
+                                                "tags": {
+                                                    "additionalProperties": {
+                                                        "type": "string"
+                                                    },
+                                                    "description": "Contains resource tags defined as key/value pairs.",
+                                                    "type": "object"
+                                                },
+                                                "type": {
+                                                    "description": "Specifies the type of the resource.",
+                                                    "readOnly": true,
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "x-ms-azure-resource": true,
+                                            "type": "object"
+                                        }
+                                    ],
+                                    "description": "EnterpriseKnowledgeGraph resource definition",
+                                    "properties": {
+                                        "properties": {
+                                            "description": "The set of properties specific to EnterpriseKnowledgeGraph resource",
+                                            "properties": {
+                                                "description": {
+                                                    "description": "The description of the EnterpriseKnowledgeGraph",
+                                                    "type": "string"
+                                                },
+                                                "metadata": {
+                                                    "description": "Specifies the metadata  of the resource.",
+                                                    "type": "object"
+                                                },
+                                                "provisioningState": {
+                                                    "description": "The state of EnterpriseKnowledgeGraph provisioning",
+                                                    "enum": [
+                                                        "Creating",
+                                                        "Deleting",
+                                                        "Failed",
+                                                        "Succeeded"
+                                                    ],
+                                                    "type": "string"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "201": {
+                        "description": "If resource is updated successfully, the service should return 201 (Created). Execution to continue asynchronously.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "allOf": [
+                                        {
+                                            "description": "Azure resource",
+                                            "properties": {
+                                                "id": {
+                                                    "description": "Specifies the resource ID.",
+                                                    "readOnly": true,
+                                                    "type": "string"
+                                                },
+                                                "location": {
+                                                    "description": "Specifies the location of the resource.",
+                                                    "type": "string"
+                                                },
+                                                "name": {
+                                                    "description": "Specifies the name of the resource.",
+                                                    "readOnly": true,
+                                                    "type": "string"
+                                                },
+                                                "sku": {
+                                                    "description": "Gets or sets the SKU of the resource.",
+                                                    "properties": {
+                                                        "name": {
+                                                            "description": "The sku name",
+                                                            "enum": [
+                                                                "F0",
+                                                                "S1"
+                                                            ],
+                                                            "type": "string",
+                                                            "x-ms-enum": {
+                                                                "modelAsString": true,
+                                                                "name": "SkuName"
+                                                            }
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "name"
+                                                    ],
+                                                    "type": "object"
+                                                },
+                                                "tags": {
+                                                    "additionalProperties": {
+                                                        "type": "string"
+                                                    },
+                                                    "description": "Contains resource tags defined as key/value pairs.",
+                                                    "type": "object"
+                                                },
+                                                "type": {
+                                                    "description": "Specifies the type of the resource.",
+                                                    "readOnly": true,
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "x-ms-azure-resource": true,
+                                            "type": "object"
+                                        }
+                                    ],
+                                    "description": "EnterpriseKnowledgeGraph resource definition",
+                                    "properties": {
+                                        "properties": {
+                                            "description": "The set of properties specific to EnterpriseKnowledgeGraph resource",
+                                            "properties": {
+                                                "description": {
+                                                    "description": "The description of the EnterpriseKnowledgeGraph",
+                                                    "type": "string"
+                                                },
+                                                "metadata": {
+                                                    "description": "Specifies the metadata  of the resource.",
+                                                    "type": "object"
+                                                },
+                                                "provisioningState": {
+                                                    "description": "The state of EnterpriseKnowledgeGraph provisioning",
+                                                    "enum": [
+                                                        "Creating",
+                                                        "Deleting",
+                                                        "Failed",
+                                                        "Succeeded"
+                                                    ],
+                                                    "type": "string"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Error response describing why the operation failed. If the resource group *or* resource does not exist, 404 (NotFound) should be returned.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "description": "EnterpriseKnowledgeGraph Service error object.",
+                                    "properties": {
+                                        "error": {
+                                            "description": "The error body.",
+                                            "properties": {
+                                                "code": {
+                                                    "description": "error code",
+                                                    "type": "string"
+                                                },
+                                                "message": {
+                                                    "description": "error message",
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "required": [
+                                                "code",
+                                                "message"
+                                            ],
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "EnterpriseKnowledgeGraph"
+                ],
+                "x-ms-examples": {
+                    "Update EnterpriseKnowledgeGraph": {
+                        "parameters": {
+                            "api-version": "2018-12-03",
+                            "parameters": {
+                                "location": "West US",
+                                "properties": {},
+                                "sku": {
+                                    "name": "S1"
+                                },
+                                "tags": {
+                                    "tag1": "value1",
+                                    "tag2": "value2"
+                                }
+                            },
+                            "resourceGroupName": "OneResourceGroupName",
+                            "resourceName": "sampleekgname",
+                            "subscriptionId": "subscription-id"
+                        },
+                        "responses": {
+                            "201": {
+                                "id": "someid",
+                                "name": "samplename",
+                                "properties": {
+                                    "provisioningState": "Accepted"
+                                },
+                                "type": "sampletype"
+                            }
+                        }
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "allOf": [
+                                    {
+                                        "description": "Azure resource",
+                                        "properties": {
+                                            "id": {
+                                                "description": "Specifies the resource ID.",
+                                                "readOnly": true,
+                                                "type": "string"
+                                            },
+                                            "location": {
+                                                "description": "Specifies the location of the resource.",
+                                                "type": "string"
+                                            },
+                                            "name": {
+                                                "description": "Specifies the name of the resource.",
+                                                "readOnly": true,
+                                                "type": "string"
+                                            },
+                                            "sku": {
+                                                "description": "Gets or sets the SKU of the resource.",
+                                                "properties": {
+                                                    "name": {
+                                                        "description": "The sku name",
+                                                        "enum": [
+                                                            "F0",
+                                                            "S1"
+                                                        ],
+                                                        "type": "string",
+                                                        "x-ms-enum": {
+                                                            "modelAsString": true,
+                                                            "name": "SkuName"
+                                                        }
+                                                    }
+                                                },
+                                                "required": [
+                                                    "name"
+                                                ],
+                                                "type": "object"
+                                            },
+                                            "tags": {
+                                                "additionalProperties": {
+                                                    "type": "string"
+                                                },
+                                                "description": "Contains resource tags defined as key/value pairs.",
+                                                "type": "object"
+                                            },
+                                            "type": {
+                                                "description": "Specifies the type of the resource.",
+                                                "readOnly": true,
+                                                "type": "string"
+                                            }
+                                        },
+                                        "x-ms-azure-resource": true,
+                                        "type": "object"
+                                    }
+                                ],
+                                "description": "EnterpriseKnowledgeGraph resource definition",
+                                "properties": {
+                                    "properties": {
+                                        "description": "The set of properties specific to EnterpriseKnowledgeGraph resource",
+                                        "properties": {
+                                            "description": {
+                                                "description": "The description of the EnterpriseKnowledgeGraph",
+                                                "type": "string"
+                                            },
+                                            "metadata": {
+                                                "description": "Specifies the metadata  of the resource.",
+                                                "type": "object"
+                                            },
+                                            "provisioningState": {
+                                                "description": "The state of EnterpriseKnowledgeGraph provisioning",
+                                                "enum": [
+                                                    "Creating",
+                                                    "Deleting",
+                                                    "Failed",
+                                                    "Succeeded"
+                                                ],
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    },
+                    "description": "The parameters to provide for the created EnterpriseKnowledgeGraph.",
+                    "required": true
+                }
+            },
+            "put": {
+                "description": "Creates a EnterpriseKnowledgeGraph Service. EnterpriseKnowledgeGraph Service is a resource group wide resource type.",
+                "operationId": "EnterpriseKnowledgeGraph_Create",
+                "parameters": [
+                    {
+                        "description": "The name of the EnterpriseKnowledgeGraph resource group in the user subscription.",
+                        "in": "path",
+                        "name": "resourceGroupName",
+                        "required": true,
+                        "x-ms-parameter-location": "method",
+                        "schema": {
+                            "type": "string",
+                            "minLength": 2,
+                            "maxLength": 64,
+                            "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.-]*$"
+                        }
+                    },
+                    {
+                        "description": "The name of the EnterpriseKnowledgeGraph resource.",
+                        "in": "path",
+                        "name": "resourceName",
+                        "required": true,
+                        "x-ms-parameter-location": "method",
+                        "schema": {
+                            "type": "string",
+                            "minLength": 2,
+                            "maxLength": 64,
+                            "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.-]*$"
+                        }
+                    },
+                    {
+                        "description": "Version of the API to be used with the client request.",
+                        "in": "query",
+                        "name": "api-version",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Azure Subscription ID.",
+                        "in": "path",
+                        "name": "subscriptionId",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The resource provider should return 200 (OK) to indicate that the operation completed successfully. ",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "allOf": [
+                                        {
+                                            "description": "Azure resource",
+                                            "properties": {
+                                                "id": {
+                                                    "description": "Specifies the resource ID.",
+                                                    "readOnly": true,
+                                                    "type": "string"
+                                                },
+                                                "location": {
+                                                    "description": "Specifies the location of the resource.",
+                                                    "type": "string"
+                                                },
+                                                "name": {
+                                                    "description": "Specifies the name of the resource.",
+                                                    "readOnly": true,
+                                                    "type": "string"
+                                                },
+                                                "sku": {
+                                                    "description": "Gets or sets the SKU of the resource.",
+                                                    "properties": {
+                                                        "name": {
+                                                            "description": "The sku name",
+                                                            "enum": [
+                                                                "F0",
+                                                                "S1"
+                                                            ],
+                                                            "type": "string",
+                                                            "x-ms-enum": {
+                                                                "modelAsString": true,
+                                                                "name": "SkuName"
+                                                            }
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "name"
+                                                    ],
+                                                    "type": "object"
+                                                },
+                                                "tags": {
+                                                    "additionalProperties": {
+                                                        "type": "string"
+                                                    },
+                                                    "description": "Contains resource tags defined as key/value pairs.",
+                                                    "type": "object"
+                                                },
+                                                "type": {
+                                                    "description": "Specifies the type of the resource.",
+                                                    "readOnly": true,
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "x-ms-azure-resource": true,
+                                            "type": "object"
+                                        }
+                                    ],
+                                    "description": "EnterpriseKnowledgeGraph resource definition",
+                                    "properties": {
+                                        "properties": {
+                                            "description": "The set of properties specific to EnterpriseKnowledgeGraph resource",
+                                            "properties": {
+                                                "description": {
+                                                    "description": "The description of the EnterpriseKnowledgeGraph",
+                                                    "type": "string"
+                                                },
+                                                "metadata": {
+                                                    "description": "Specifies the metadata  of the resource.",
+                                                    "type": "object"
+                                                },
+                                                "provisioningState": {
+                                                    "description": "The state of EnterpriseKnowledgeGraph provisioning",
+                                                    "enum": [
+                                                        "Creating",
+                                                        "Deleting",
+                                                        "Failed",
+                                                        "Succeeded"
+                                                    ],
+                                                    "type": "string"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "201": {
+                        "description": "If resource is created successfully, the service should return 201 (Creating). Execution to continue asynchronously.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "allOf": [
+                                        {
+                                            "description": "Azure resource",
+                                            "properties": {
+                                                "id": {
+                                                    "description": "Specifies the resource ID.",
+                                                    "readOnly": true,
+                                                    "type": "string"
+                                                },
+                                                "location": {
+                                                    "description": "Specifies the location of the resource.",
+                                                    "type": "string"
+                                                },
+                                                "name": {
+                                                    "description": "Specifies the name of the resource.",
+                                                    "readOnly": true,
+                                                    "type": "string"
+                                                },
+                                                "sku": {
+                                                    "description": "Gets or sets the SKU of the resource.",
+                                                    "properties": {
+                                                        "name": {
+                                                            "description": "The sku name",
+                                                            "enum": [
+                                                                "F0",
+                                                                "S1"
+                                                            ],
+                                                            "type": "string",
+                                                            "x-ms-enum": {
+                                                                "modelAsString": true,
+                                                                "name": "SkuName"
+                                                            }
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "name"
+                                                    ],
+                                                    "type": "object"
+                                                },
+                                                "tags": {
+                                                    "additionalProperties": {
+                                                        "type": "string"
+                                                    },
+                                                    "description": "Contains resource tags defined as key/value pairs.",
+                                                    "type": "object"
+                                                },
+                                                "type": {
+                                                    "description": "Specifies the type of the resource.",
+                                                    "readOnly": true,
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "x-ms-azure-resource": true,
+                                            "type": "object"
+                                        }
+                                    ],
+                                    "description": "EnterpriseKnowledgeGraph resource definition",
+                                    "properties": {
+                                        "properties": {
+                                            "description": "The set of properties specific to EnterpriseKnowledgeGraph resource",
+                                            "properties": {
+                                                "description": {
+                                                    "description": "The description of the EnterpriseKnowledgeGraph",
+                                                    "type": "string"
+                                                },
+                                                "metadata": {
+                                                    "description": "Specifies the metadata  of the resource.",
+                                                    "type": "object"
+                                                },
+                                                "provisioningState": {
+                                                    "description": "The state of EnterpriseKnowledgeGraph provisioning",
+                                                    "enum": [
+                                                        "Creating",
+                                                        "Deleting",
+                                                        "Failed",
+                                                        "Succeeded"
+                                                    ],
+                                                    "type": "string"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Error response describing why the operation failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "description": "EnterpriseKnowledgeGraph Service error object.",
+                                    "properties": {
+                                        "error": {
+                                            "description": "The error body.",
+                                            "properties": {
+                                                "code": {
+                                                    "description": "error code",
+                                                    "type": "string"
+                                                },
+                                                "message": {
+                                                    "description": "error message",
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "required": [
+                                                "code",
+                                                "message"
+                                            ],
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "EnterpriseKnowledgeGraph"
+                ],
+                "x-ms-examples": {
+                    "Create EnterpriseKnowledgeGraph": {
+                        "parameters": {
+                            "api-version": "2018-12-03",
+                            "parameters": {
+                                "location": "West US",
+                                "properties": {},
+                                "tags": {
+                                    "tag1": "value1",
+                                    "tag2": "value2"
+                                }
+                            },
+                            "resourceGroupName": "OneResourceGroupName",
+                            "resourceName": "sampleekgname",
+                            "subscriptionId": "subscription-id"
+                        },
+                        "responses": {
+                            "201": {
+                                "id": "someid",
+                                "name": "samplename",
+                                "properties": {
+                                    "provisioningState": "Accepted"
+                                },
+                                "type": "sampletype"
+                            }
+                        }
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "allOf": [
+                                    {
+                                        "description": "Azure resource",
+                                        "properties": {
+                                            "id": {
+                                                "description": "Specifies the resource ID.",
+                                                "readOnly": true,
+                                                "type": "string"
+                                            },
+                                            "location": {
+                                                "description": "Specifies the location of the resource.",
+                                                "type": "string"
+                                            },
+                                            "name": {
+                                                "description": "Specifies the name of the resource.",
+                                                "readOnly": true,
+                                                "type": "string"
+                                            },
+                                            "sku": {
+                                                "description": "Gets or sets the SKU of the resource.",
+                                                "properties": {
+                                                    "name": {
+                                                        "description": "The sku name",
+                                                        "enum": [
+                                                            "F0",
+                                                            "S1"
+                                                        ],
+                                                        "type": "string",
+                                                        "x-ms-enum": {
+                                                            "modelAsString": true,
+                                                            "name": "SkuName"
+                                                        }
+                                                    }
+                                                },
+                                                "required": [
+                                                    "name"
+                                                ],
+                                                "type": "object"
+                                            },
+                                            "tags": {
+                                                "additionalProperties": {
+                                                    "type": "string"
+                                                },
+                                                "description": "Contains resource tags defined as key/value pairs.",
+                                                "type": "object"
+                                            },
+                                            "type": {
+                                                "description": "Specifies the type of the resource.",
+                                                "readOnly": true,
+                                                "type": "string"
+                                            }
+                                        },
+                                        "x-ms-azure-resource": true,
+                                        "type": "object"
+                                    }
+                                ],
+                                "description": "EnterpriseKnowledgeGraph resource definition",
+                                "properties": {
+                                    "properties": {
+                                        "description": "The set of properties specific to EnterpriseKnowledgeGraph resource",
+                                        "properties": {
+                                            "description": {
+                                                "description": "The description of the EnterpriseKnowledgeGraph",
+                                                "type": "string"
+                                            },
+                                            "metadata": {
+                                                "description": "Specifies the metadata  of the resource.",
+                                                "type": "object"
+                                            },
+                                            "provisioningState": {
+                                                "description": "The state of EnterpriseKnowledgeGraph provisioning",
+                                                "enum": [
+                                                    "Creating",
+                                                    "Deleting",
+                                                    "Failed",
+                                                    "Succeeded"
+                                                ],
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    },
+                    "description": "The parameters to provide for the created EnterpriseKnowledgeGraph.",
+                    "required": true
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "EnterpriseKnowledgeGraph": {
+                "allOf": [
+                    {
+                        "description": "Azure resource",
+                        "properties": {
+                            "id": {
+                                "description": "Specifies the resource ID.",
+                                "readOnly": true,
+                                "type": "string"
+                            },
+                            "location": {
+                                "description": "Specifies the location of the resource.",
+                                "type": "string"
+                            },
+                            "name": {
+                                "description": "Specifies the name of the resource.",
+                                "readOnly": true,
+                                "type": "string"
+                            },
+                            "sku": {
+                                "description": "Gets or sets the SKU of the resource.",
+                                "properties": {
+                                    "name": {
+                                        "description": "The sku name",
+                                        "enum": [
+                                            "F0",
+                                            "S1"
+                                        ],
+                                        "type": "string",
+                                        "x-ms-enum": {
+                                            "modelAsString": true,
+                                            "name": "SkuName"
+                                        }
+                                    }
+                                },
+                                "required": [
+                                    "name"
+                                ],
+                                "type": "object"
+                            },
+                            "tags": {
+                                "additionalProperties": {
+                                    "type": "string"
+                                },
+                                "description": "Contains resource tags defined as key/value pairs.",
+                                "type": "object"
+                            },
+                            "type": {
+                                "description": "Specifies the type of the resource.",
+                                "readOnly": true,
+                                "type": "string"
+                            }
+                        },
+                        "x-ms-azure-resource": true,
+                        "type": "object"
+                    }
+                ],
+                "description": "EnterpriseKnowledgeGraph resource definition",
+                "properties": {
+                    "properties": {
+                        "description": "The set of properties specific to EnterpriseKnowledgeGraph resource",
+                        "properties": {
+                            "description": {
+                                "description": "The description of the EnterpriseKnowledgeGraph",
+                                "type": "string"
+                            },
+                            "metadata": {
+                                "description": "Specifies the metadata  of the resource.",
+                                "type": "object"
+                            },
+                            "provisioningState": {
+                                "description": "The state of EnterpriseKnowledgeGraph provisioning",
+                                "enum": [
+                                    "Creating",
+                                    "Deleting",
+                                    "Failed",
+                                    "Succeeded"
+                                ],
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "type": "object"
+            },
+            "EnterpriseKnowledgeGraphProperties": {
+                "description": "The parameters to provide for the EnterpriseKnowledgeGraph.",
+                "properties": {
+                    "description": {
+                        "description": "The description of the EnterpriseKnowledgeGraph",
+                        "type": "string"
+                    },
+                    "metadata": {
+                        "description": "Specifies the metadata  of the resource.",
+                        "type": "object"
+                    },
+                    "provisioningState": {
+                        "description": "The state of EnterpriseKnowledgeGraph provisioning",
+                        "enum": [
+                            "Creating",
+                            "Deleting",
+                            "Failed",
+                            "Succeeded"
+                        ],
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "EnterpriseKnowledgeGraphResponseList": {
+                "description": "The list of  EnterpriseKnowledgeGraph service operation response.",
+                "properties": {
+                    "nextLink": {
+                        "description": "The link used to get the next page of EnterpriseKnowledgeGraph service resources.",
+                        "type": "string"
+                    },
+                    "value": {
+                        "description": "Gets the list of EnterpriseKnowledgeGraph service results and their properties.",
+                        "items": {
+                            "allOf": [
+                                {
+                                    "description": "Azure resource",
+                                    "properties": {
+                                        "id": {
+                                            "description": "Specifies the resource ID.",
+                                            "readOnly": true,
+                                            "type": "string"
+                                        },
+                                        "location": {
+                                            "description": "Specifies the location of the resource.",
+                                            "type": "string"
+                                        },
+                                        "name": {
+                                            "description": "Specifies the name of the resource.",
+                                            "readOnly": true,
+                                            "type": "string"
+                                        },
+                                        "sku": {
+                                            "description": "Gets or sets the SKU of the resource.",
+                                            "properties": {
+                                                "name": {
+                                                    "description": "The sku name",
+                                                    "enum": [
+                                                        "F0",
+                                                        "S1"
+                                                    ],
+                                                    "type": "string",
+                                                    "x-ms-enum": {
+                                                        "modelAsString": true,
+                                                        "name": "SkuName"
+                                                    }
+                                                }
+                                            },
+                                            "required": [
+                                                "name"
+                                            ],
+                                            "type": "object"
+                                        },
+                                        "tags": {
+                                            "additionalProperties": {
+                                                "type": "string"
+                                            },
+                                            "description": "Contains resource tags defined as key/value pairs.",
+                                            "type": "object"
+                                        },
+                                        "type": {
+                                            "description": "Specifies the type of the resource.",
+                                            "readOnly": true,
+                                            "type": "string"
+                                        }
+                                    },
+                                    "x-ms-azure-resource": true,
+                                    "type": "object"
+                                }
+                            ],
+                            "description": "EnterpriseKnowledgeGraph resource definition",
+                            "properties": {
+                                "properties": {
+                                    "description": "The set of properties specific to EnterpriseKnowledgeGraph resource",
+                                    "properties": {
+                                        "description": {
+                                            "description": "The description of the EnterpriseKnowledgeGraph",
+                                            "type": "string"
+                                        },
+                                        "metadata": {
+                                            "description": "Specifies the metadata  of the resource.",
+                                            "type": "object"
+                                        },
+                                        "provisioningState": {
+                                            "description": "The state of EnterpriseKnowledgeGraph provisioning",
+                                            "enum": [
+                                                "Creating",
+                                                "Deleting",
+                                                "Failed",
+                                                "Succeeded"
+                                            ],
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "readOnly": true,
+                        "type": "array"
+                    }
+                },
+                "type": "object"
+            },
+            "Error": {
+                "description": "EnterpriseKnowledgeGraph Service error object.",
+                "properties": {
+                    "error": {
+                        "description": "The error body.",
+                        "properties": {
+                            "code": {
+                                "description": "error code",
+                                "type": "string"
+                            },
+                            "message": {
+                                "description": "error message",
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "code",
+                            "message"
+                        ],
+                        "type": "object"
+                    }
+                },
+                "type": "object"
+            },
+            "ErrorBody": {
+                "description": "EnterpriseKnowledgeGraph Service error body.",
+                "properties": {
+                    "code": {
+                        "description": "error code",
+                        "type": "string"
+                    },
+                    "message": {
+                        "description": "error message",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "code",
+                    "message"
+                ],
+                "type": "object"
+            },
+            "OperationDisplayInfo": {
+                "description": "The operation supported by EnterpriseKnowledgeGraph Service Management.",
+                "properties": {
+                    "description": {
+                        "description": "The description of the operation.",
+                        "type": "string"
+                    },
+                    "operation": {
+                        "description": "The action that users can perform, based on their permission level.",
+                        "type": "string"
+                    },
+                    "provider": {
+                        "description": "Service provider: Microsoft EnterpriseKnowledgeGraph Service.",
+                        "type": "string"
+                    },
+                    "resource": {
+                        "description": "Resource on which the operation is performed.",
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "OperationEntity": {
+                "description": "The operations supported by EnterpriseKnowledgeGraph Service Management.",
+                "properties": {
+                    "display": {
+                        "description": "The operation supported by EnterpriseKnowledgeGraph Service Management.",
+                        "properties": {
+                            "description": {
+                                "description": "The description of the operation.",
+                                "type": "string"
+                            },
+                            "operation": {
+                                "description": "The action that users can perform, based on their permission level.",
+                                "type": "string"
+                            },
+                            "provider": {
+                                "description": "Service provider: Microsoft EnterpriseKnowledgeGraph Service.",
+                                "type": "string"
+                            },
+                            "resource": {
+                                "description": "Resource on which the operation is performed.",
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "name": {
+                        "description": "Operation name: {provider}/{resource}/{operation}.",
+                        "type": "string"
+                    },
+                    "origin": {
+                        "description": "The origin of the operation.",
+                        "type": "string"
+                    },
+                    "properties": {
+                        "description": "Additional properties.",
+                        "type": "object"
+                    }
+                },
+                "type": "object"
+            },
+            "OperationEntityListResult": {
+                "description": "The list of EnterpriseKnowledgeGraph service operation response.",
+                "properties": {
+                    "nextLink": {
+                        "description": "The link used to get the next page of operations.",
+                        "type": "string"
+                    },
+                    "value": {
+                        "description": "The list of operations.",
+                        "items": {
+                            "description": "The operations supported by EnterpriseKnowledgeGraph Service Management.",
+                            "properties": {
+                                "display": {
+                                    "description": "The operation supported by EnterpriseKnowledgeGraph Service Management.",
+                                    "properties": {
+                                        "description": {
+                                            "description": "The description of the operation.",
+                                            "type": "string"
+                                        },
+                                        "operation": {
+                                            "description": "The action that users can perform, based on their permission level.",
+                                            "type": "string"
+                                        },
+                                        "provider": {
+                                            "description": "Service provider: Microsoft EnterpriseKnowledgeGraph Service.",
+                                            "type": "string"
+                                        },
+                                        "resource": {
+                                            "description": "Resource on which the operation is performed.",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                "name": {
+                                    "description": "Operation name: {provider}/{resource}/{operation}.",
+                                    "type": "string"
+                                },
+                                "origin": {
+                                    "description": "The origin of the operation.",
+                                    "type": "string"
+                                },
+                                "properties": {
+                                    "description": "Additional properties.",
+                                    "type": "object"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "type": "array"
+                    }
+                },
+                "type": "object"
+            },
+            "Resource": {
+                "description": "Azure resource",
+                "properties": {
+                    "id": {
+                        "description": "Specifies the resource ID.",
+                        "readOnly": true,
+                        "type": "string"
+                    },
+                    "location": {
+                        "description": "Specifies the location of the resource.",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "Specifies the name of the resource.",
+                        "readOnly": true,
+                        "type": "string"
+                    },
+                    "sku": {
+                        "description": "Gets or sets the SKU of the resource.",
+                        "properties": {
+                            "name": {
+                                "description": "The sku name",
+                                "enum": [
+                                    "F0",
+                                    "S1"
+                                ],
+                                "type": "string",
+                                "x-ms-enum": {
+                                    "modelAsString": true,
+                                    "name": "SkuName"
+                                }
+                            }
+                        },
+                        "required": [
+                            "name"
+                        ],
+                        "type": "object"
+                    },
+                    "tags": {
+                        "additionalProperties": {
+                            "type": "string"
+                        },
+                        "description": "Contains resource tags defined as key/value pairs.",
+                        "type": "object"
+                    },
+                    "type": {
+                        "description": "Specifies the type of the resource.",
+                        "readOnly": true,
+                        "type": "string"
+                    }
+                },
+                "x-ms-azure-resource": true,
+                "type": "object"
+            },
+            "Sku": {
+                "description": "The SKU of the EnterpriseKnowledgeGraph service account.",
+                "properties": {
+                    "name": {
+                        "description": "The sku name",
+                        "enum": [
+                            "F0",
+                            "S1"
+                        ],
+                        "type": "string",
+                        "x-ms-enum": {
+                            "modelAsString": true,
+                            "name": "SkuName"
+                        }
+                    }
+                },
+                "required": [
+                    "name"
+                ],
+                "type": "object"
+            },
+            "SkuName": {
+                "description": "The name of SKU.",
+                "enum": [
+                    "F0",
+                    "S1"
+                ],
+                "type": "string",
+                "x-ms-enum": {
+                    "modelAsString": true,
+                    "name": "SkuName"
+                }
+            }
+        },
+        "parameters": {
+            "apiVersionParameter": {
+                "description": "Version of the API to be used with the client request.",
+                "in": "query",
+                "name": "api-version",
+                "required": true,
+                "schema": {
+                    "type": "string"
+                }
+            },
+            "resourceGroupNameParameter": {
+                "description": "The name of the EnterpriseKnowledgeGraph resource group in the user subscription.",
+                "in": "path",
+                "name": "resourceGroupName",
+                "required": true,
+                "x-ms-parameter-location": "method",
+                "schema": {
+                    "type": "string",
+                    "minLength": 2,
+                    "maxLength": 64,
+                    "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.-]*$"
+                }
+            },
+            "resourceNameParameter": {
+                "description": "The name of the EnterpriseKnowledgeGraph resource.",
+                "in": "path",
+                "name": "resourceName",
+                "required": true,
+                "x-ms-parameter-location": "method",
+                "schema": {
+                    "type": "string",
+                    "minLength": 2,
+                    "maxLength": 64,
+                    "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.-]*$"
+                }
+            },
+            "subscriptionIdParameter": {
+                "description": "Azure Subscription ID.",
+                "in": "path",
+                "name": "subscriptionId",
+                "required": true,
+                "schema": {
+                    "type": "string"
+                }
+            }
+        },
+        "requestBodies": {
+            "EnterpriseKnowledgeGraph_UpdateParameters": {
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "description": "Azure resource",
+                                    "properties": {
+                                        "id": {
+                                            "description": "Specifies the resource ID.",
+                                            "readOnly": true,
+                                            "type": "string"
+                                        },
+                                        "location": {
+                                            "description": "Specifies the location of the resource.",
+                                            "type": "string"
+                                        },
+                                        "name": {
+                                            "description": "Specifies the name of the resource.",
+                                            "readOnly": true,
+                                            "type": "string"
+                                        },
+                                        "sku": {
+                                            "description": "Gets or sets the SKU of the resource.",
+                                            "properties": {
+                                                "name": {
+                                                    "description": "The sku name",
+                                                    "enum": [
+                                                        "F0",
+                                                        "S1"
+                                                    ],
+                                                    "type": "string",
+                                                    "x-ms-enum": {
+                                                        "modelAsString": true,
+                                                        "name": "SkuName"
+                                                    }
+                                                }
+                                            },
+                                            "required": [
+                                                "name"
+                                            ],
+                                            "type": "object"
+                                        },
+                                        "tags": {
+                                            "additionalProperties": {
+                                                "type": "string"
+                                            },
+                                            "description": "Contains resource tags defined as key/value pairs.",
+                                            "type": "object"
+                                        },
+                                        "type": {
+                                            "description": "Specifies the type of the resource.",
+                                            "readOnly": true,
+                                            "type": "string"
+                                        }
+                                    },
+                                    "x-ms-azure-resource": true,
+                                    "type": "object"
+                                }
+                            ],
+                            "description": "EnterpriseKnowledgeGraph resource definition",
+                            "properties": {
+                                "properties": {
+                                    "description": "The set of properties specific to EnterpriseKnowledgeGraph resource",
+                                    "properties": {
+                                        "description": {
+                                            "description": "The description of the EnterpriseKnowledgeGraph",
+                                            "type": "string"
+                                        },
+                                        "metadata": {
+                                            "description": "Specifies the metadata  of the resource.",
+                                            "type": "object"
+                                        },
+                                        "provisioningState": {
+                                            "description": "The state of EnterpriseKnowledgeGraph provisioning",
+                                            "enum": [
+                                                "Creating",
+                                                "Deleting",
+                                                "Failed",
+                                                "Succeeded"
+                                            ],
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                },
+                "description": "The parameters to provide for the created EnterpriseKnowledgeGraph.",
+                "required": true
+            }
+        },
+        "securitySchemes": {
+            "azure_auth": {
+                "description": "Azure Active Directory OAuth2 Flow",
+                "type": "oauth2",
+                "flows": {
+                    "implicit": {
+                        "authorizationUrl": "https://login.microsoftonline.com/common/oauth2/authorize",
+                        "scopes": {
+                            "user_impersonation": "impersonate your user account"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "security": [
+        {
+            "azure_auth": []
+        }
+    ]
+}
